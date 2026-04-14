@@ -5,23 +5,23 @@ const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4">
     <div className="bg-white/80 backdrop-blur-md border border-white/20 shadow-sm rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl">
       <div className="flex items-center gap-2">
-        <img src="https://www2.myunisoft.fr/outils/o/theo/Autre/YNOV%20-%20Examen%20fin%20de%20module%20-%20Copie%20Eliott%20Rubini%20(1).pdf.png" alt="Gemba Logo" className="h-8 md:h-10 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
+        <img src="/logo.svg" alt="AD Gemba Logo" className="h-10 md:h-12 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
-        <a href="#" className="hover:text-gray-900 transition-colors">Notre approche</a>
-        <a href="#" className="hover:text-gray-900 transition-colors">Notre mission</a>
-        <a href="#" className="hover:text-gray-900 transition-colors">Contactez-nous</a>
+        <a href="#approche" className="hover:text-gray-900 transition-colors">Notre approche</a>
+        <a href="#mission" className="hover:text-gray-900 transition-colors">Notre mission</a>
+        <a href="#contact" className="hover:text-gray-900 transition-colors">Contactez-nous</a>
       </div>
-      <button className="bg-[#00ada3] hover:bg-[#00968d] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors shadow-[0_4px_14px_0_rgba(0,173,163,0.39)]">
+      <a href="#contact" className="bg-[#00ada3] hover:bg-[#00968d] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors shadow-[0_4px_14px_0_rgba(0,173,163,0.39)]">
         Prendre contact
-      </button>
+      </a>
     </div>
   </nav>
 );
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const targetRef = useRef<HTMLButtonElement>(null);
+  const targetRef = useRef<HTMLAnchorElement>(null);
   const mousePosRef = useRef<{ x: number | null, y: number | null }>({ x: null, y: null });
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const animationFrameIdRef = useRef<number | null>(null);
@@ -140,18 +140,6 @@ const Hero = () => {
     <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-3xl -z-10" />
 
     <div className="max-w-4xl mx-auto relative z-10">
-      <div className="flex items-center justify-center gap-3 mb-8">
-        <div className="flex -space-x-2">
-          <img src="https://i.pravatar.cc/100?img=11" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
-          <img src="https://i.pravatar.cc/100?img=12" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
-          <img src="https://i.pravatar.cc/100?img=13" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
-          <div className="w-8 h-8 rounded-full border-2 border-white bg-[#00ada3] flex items-center justify-center text-[10px] font-bold text-white">
-            +25
-          </div>
-        </div>
-        <span className="text-sm font-medium text-gray-600">Plus de 25 industriels nous font confiance</span>
-      </div>
-
       <h1 className="text-6xl md:text-7xl font-bold text-slate-900 tracking-tight mb-6 leading-[1.1]">
         Transformez vos pertes<br />
         industrielles en <span className="text-[#00ada3]">
@@ -167,47 +155,107 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center justify-center gap-4">
-        <button ref={targetRef} className="group bg-[#00ada3] hover:bg-[#00968d] text-white px-8 py-3.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-[0_8px_20px_-6px_rgba(0,173,163,0.5)] hover:shadow-[0_10px_25px_-6px_rgba(0,173,163,0.6)] hover:-translate-y-0.5">
+        <a ref={targetRef} href="#contact" className="group bg-[#00ada3] hover:bg-[#00968d] text-white px-8 py-3.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-[0_8px_20px_-6px_rgba(0,173,163,0.5)] hover:shadow-[0_10px_25px_-6px_rgba(0,173,163,0.6)] hover:-translate-y-0.5">
           Prendre contact <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button>
-        <button className="group bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
+        </a>
+        <a href="#mission" className="group bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
           Découvrir nos formations <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button>
+        </a>
       </div>
     </div>
   </section>
   );
 };
 
+const WhyTrustUs = () => (
+  <section className="py-24 px-4 bg-slate-50/50 border-y border-slate-100">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+          Pourquoi faire confiance à <span className="text-[#00ada3]">AD Gemba</span>
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Bullet 1 */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 bg-[#00ada3]/10 rounded-xl flex items-center justify-center mb-6">
+            <CheckCircle2 className="w-6 h-6 text-[#00ada3]" />
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3">32 ans d'expérience</h3>
+          <p className="text-slate-600 leading-relaxed text-sm">
+            Expérience industrielle dans l’industrie automobile. Une expertise solide dans les environnements complexes.
+          </p>
+        </div>
+
+        {/* Bullet 2 */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 bg-[#00ada3]/10 rounded-xl flex items-center justify-center mb-6">
+            <Users className="w-6 h-6 text-[#00ada3]" />
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3">10 ans de Management</h3>
+          <p className="text-slate-600 leading-relaxed text-sm">
+            D'un Département Autonome de Production. Gestion de 350 personnes et optimisation des performances opérationnelles.
+          </p>
+        </div>
+
+        {/* Bullet 3 */}
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 bg-[#00ada3]/10 rounded-xl flex items-center justify-center mb-6">
+            <Settings className="w-6 h-6 text-[#00ada3]" />
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3">15 ans TPS Manager</h3>
+          <p className="text-slate-600 leading-relaxed text-sm">
+            Toyota Production System European Manager chez JTEKT Europe. Mise en place de systèmes Lean et amélioration continue à l’échelle Européenne.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-10 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(0,178,169,0.05),transparent_50%)]" />
+        <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-medium relative z-10">
+          Cette combinaison d’expérience terrain et de leadership dans l’excellence opérationnelle permet à AD GEMBA d’accompagner ses clients dans la transformation des pertes industrielles en performance globale.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
 const FeaturesLenders = () => (
-  <section className="py-20 px-4 bg-white">
+  <section id="approche" className="py-20 px-4 bg-white">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-2 block">NOTRE APPROCHE GEMBA</span>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
-        {/* Observation in situ */}
+        {/* Observation */}
         <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <Users className="w-6 h-6 text-slate-700" /> Observation <span className="text-[#00ada3]">in situ</span>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Users className="w-6 h-6 text-slate-700" /> Observation
             </h3>
-            <p className="text-gray-500 max-w-sm">
-              Nous sortons des salles de réunion pour analyser vos processus réels, directement au cœur de l'atelier (le Gemba). C'est là que se trouve la vérité de votre performance.
-            </p>
+            <ul className="text-gray-600 space-y-3 list-disc pl-5">
+              <li><strong>Comprendre</strong> la réalité du terrain</li>
+              <li><strong>Observer</strong> avant d’optimiser</li>
+              <li>Une bonne observation aligne les équipes et déclenche des <strong>améliorations concrètes</strong></li>
+              <li><strong>Comprendre</strong> comment la matière et l’information circulent</li>
+              <li><strong>Observer</strong> avec les équipes pour révéler les <strong>irritants quotidiens</strong></li>
+            </ul>
           </div>
         </div>
 
         {/* Écoute & Compréhension */}
         <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <Users className="w-6 h-6 text-slate-700" /> Écoute & <span className="text-[#00ada3]">Compréhension</span>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Users className="w-6 h-6 text-slate-700" /> <span className="text-[#00ada3]">Écoute</span> et <span className="text-[#00ada3]">compréhension</span>
             </h3>
-            <p className="text-gray-500 max-w-sm">
-              L'humain est le moteur de l'industrie. Nous prenons le temps d'échanger avec vos équipes pour comprendre les véritables contraintes auxquelles elles font face au quotidien, sans aucun jugement.
-            </p>
+            <ul className="text-gray-600 space-y-3 list-disc pl-5">
+              <li>Les opérateurs détiennent la <strong>réalité du terrain</strong></li>
+              <li><strong>Analyses des causes</strong> plutôt que traiter les symptômes</li>
+              <li>Transformer l’écoute en <strong>action concrètes</strong></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -216,24 +264,30 @@ const FeaturesLenders = () => (
         {/* Traque des gaspillages */}
         <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
               <BarChart3 className="w-6 h-6 text-slate-700" /> Traque des <span className="text-[#00ada3]">gaspillages</span>
             </h3>
-            <p className="text-gray-500 max-w-sm">
-              Mouvements inutiles, temps d'attente, surproduction ou défauts... Nous identifions et cartographions avec précision toutes les sources de pertes qui freinent votre rentabilité.
-            </p>
+            <ul className="text-gray-600 space-y-3 list-disc pl-5">
+              <li><strong>Mesurer</strong> pour décider</li>
+              <li><strong>Mesurer</strong> les temps réels (cycles, attentes…)</li>
+              <li><strong>Quantifier</strong> les écarts</li>
+              <li>Nous identifions et cartographions avec précision toutes les sources de pertes qui freinent votre <strong>rentabilité</strong></li>
+            </ul>
           </div>
         </div>
 
         {/* Co-construction de solutions */}
         <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
           <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
               <Settings className="w-6 h-6 text-slate-700" /> Co-construction de <span className="text-[#00ada3]">solutions</span>
             </h3>
-            <p className="text-gray-500 max-w-sm">
-              Nous ne vous laissons pas avec un simple rapport. Nous concevons et déployons des solutions simples et durables, toujours en impliquant vos collaborateurs pour garantir leur adhésion.
-            </p>
+            <ul className="text-gray-600 space-y-3 list-disc pl-5">
+              <li>Construire avec les équipes des solutions réalistes et <strong>immédiatement</strong> applicables</li>
+              <li>Tester <strong>rapidement</strong>, ajuster ensemble</li>
+              <li>Aligner la performance et adhésion pour garantir l’<strong>appropriation</strong></li>
+              <li>Impliquer pour <strong>pérenniser</strong> des solutions durablement appliquées</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -245,7 +299,7 @@ const FeaturesAgencies = () => {
   const [activeTab, setActiveTab] = useState('intervention');
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-white to-blue-50/30">
+    <section id="mission" className="py-24 px-4 bg-gradient-to-b from-white to-blue-50/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-4 block">NOTRE MISSION</span>
@@ -273,9 +327,12 @@ const FeaturesAgencies = () => {
         {activeTab === 'intervention' ? (
           <div className="grid md:grid-cols-2 gap-12 items-stretch animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 h-full flex flex-col justify-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight text-left">
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight text-left mb-4">
                 Déployez des améliorations concrètes avec l'<span className="text-[#00ada3]">approche Kaizen</span>
               </h3>
+              <p className="text-lg text-slate-600">
+                Obtenez des gains rapides et durables avec l’approche Kaizen appliquée à vos processus !
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -320,32 +377,35 @@ const FeaturesAgencies = () => {
 
             <div className="space-y-4">
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
-                <div className="bg-blue-50 p-2 rounded-full mt-1">
+                <div className="bg-blue-50 p-2 rounded-full mt-1 shrink-0">
                   <BarChart3 className="w-5 h-5 text-[#00ada3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Fondamentaux de l'Excellence</h4>
-                  <p className="text-xs text-gray-500">Maîtrise du TPS (Toyota Production System) et introduction complète au Lean Management.</p>
+                  <h4 className="font-bold text-slate-900 text-sm mb-2">Fondamentaux de l’Excellence Opérationnelle</h4>
+                  <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                    <li>Donner du sens, comprendre les concepts et l’intérêt d’un système Lean</li>
+                    <li>Inviter vos équipes aux fondations de l’amélioration continue</li>
+                  </ul>
                 </div>
               </div>
               
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
-                <div className="bg-blue-50 p-2 rounded-full mt-1">
+                <div className="bg-blue-50 p-2 rounded-full mt-1 shrink-0">
                   <Settings className="w-5 h-5 text-[#00ada3]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Outils d'Amélioration Terrain</h4>
-                  <p className="text-xs text-gray-500">Déploiement de la méthode 5S, du management visuel et du SMED (réduction des temps de changement).</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-start">
-                <div className="bg-blue-50 p-2 rounded-full mt-1">
-                  <MapPin className="w-5 h-5 text-[#00ada3]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Leadership Terrain</h4>
-                  <p className="text-xs text-gray-500">Formation dédiée aux managers pour leur donner la posture et les clés de l'animation au quotidien.</p>
+                  <h4 className="font-bold text-slate-900 text-sm mb-2">Outils amelioration & Leadership Terrain</h4>
+                  <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                    <li>5S concept</li>
+                    <li>Management visuel</li>
+                    <li>Travail standardisé</li>
+                    <li>Optimisation des postes de travail (mesurer, équilibrer, savoir observer)</li>
+                    <li>Posture & les clés de l’animation journalière en production (Pilotage de la performance)</li>
+                    <li>Résolution de problèmes "5 Why"</li>
+                    <li>SMED réduction des temps de changement de série</li>
+                    <li>Value-Stream Mapping « cartographies des flux »</li>
+                    <li>Maintenance autonome</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -359,7 +419,7 @@ const FeaturesAgencies = () => {
 import { MultiStepForm } from './components/MultiStepForm';
 
 const ContactCTA = () => (
-  <section className="py-32 px-4 relative overflow-hidden bg-white">
+  <section id="contact" className="py-32 px-4 relative overflow-hidden bg-white">
     {/* Background Gradient */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00B2A9]/5 rounded-full blur-3xl -z-10" />
     
@@ -390,7 +450,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
       <div className="col-span-1 md:col-span-2">
         <div className="flex items-center gap-2 mb-6">
-          <img src="https://www2.myunisoft.fr/outils/o/theo/Autre/YNOV%20-%20Examen%20fin%20de%20module%20-%20Copie%20Eliott%20Rubini%20(1).pdf.png" alt="Gemba Logo" className="h-12 md:h-16 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
+          <img src="/logo.svg" alt="AD Gemba Logo" className="h-16 md:h-20 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
         </div>
         <p className="text-gray-500 text-sm max-w-sm">
           Nous transformons votre performance opérationnelle directement sur le terrain pour développer une culture pérenne d'amélioration continue.
@@ -400,9 +460,9 @@ const Footer = () => (
       <div>
         <h4 className="font-bold text-slate-900 mb-6">Navigation</h4>
         <ul className="space-y-4 text-sm text-gray-500">
-          <li><a href="#" className="hover:text-[#00ada3] transition-colors">Notre approche</a></li>
-          <li><a href="#" className="hover:text-[#00ada3] transition-colors">Notre mission</a></li>
-          <li><a href="#" className="hover:text-[#00ada3] transition-colors">Contactez-nous</a></li>
+          <li><a href="#approche" className="hover:text-[#00ada3] transition-colors">Notre approche</a></li>
+          <li><a href="#mission" className="hover:text-[#00ada3] transition-colors">Notre mission</a></li>
+          <li><a href="#contact" className="hover:text-[#00ada3] transition-colors">Contactez-nous</a></li>
         </ul>
       </div>
 
@@ -411,11 +471,15 @@ const Footer = () => (
         <ul className="space-y-4 text-sm text-gray-500">
           <li className="flex items-start gap-3">
             <Mail className="w-5 h-5 text-gray-400 shrink-0" />
-            <span>Alain.dechaud@Gemba.fr</span>
+            <a href="mailto:contact@adgemba.fr" className="hover:text-[#00ada3] transition-colors">contact@adgemba.fr</a>
+          </li>
+          <li className="flex items-start gap-3">
+            <Phone className="w-5 h-5 text-gray-400 shrink-0" />
+            <a href="tel:+33614199154" className="hover:text-[#00ada3] transition-colors">06 14 19 91 54</a>
           </li>
           <li className="flex items-start gap-3">
             <MapPin className="w-5 h-5 text-gray-400 shrink-0" />
-            <span>368 Rue du Broteau, 69540 Irigny</span>
+            <span>Communay (69)</span>
           </li>
         </ul>
       </div>
@@ -433,6 +497,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <WhyTrustUs />
         <FeaturesLenders />
         <FeaturesAgencies />
         <ContactCTA />
