@@ -38,20 +38,22 @@ export function MultiStepForm() {
   const submitForm = async () => {
     setIsSubmitting(true)
     
-    // Intégration Formspree pour envoyer à eliott.rubini69@gmail.com
     try {
-      // Votre URL Formspree exacte a été intégrée ici :
-      await fetch("https://formspree.io/f/xjgpklvz", {
+      // Intégration Web3Forms :
+      // Remplacez "VOTRE_CLE_D_ACCES_ICI" par la clé reçue sur contact@adgemba.fr
+      await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
+          access_key: "VOTRE_CLE_D_ACCES_ICI", 
           email: formData.email,
           name: formData.name,
           message: formData.goal,
-          subject: "Nouveau contact Lead - Alain Dechaud Gemba",
+          subject: "Nouveau lead depuis le site AD Gemba",
+          from_name: "Site Web AD Gemba"
         }),
       })
       setIsComplete(true)

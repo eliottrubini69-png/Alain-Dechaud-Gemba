@@ -8,9 +8,9 @@ const Navbar = () => (
         <img src="/logo.svg" alt="AD Gemba Logo" className="h-10 md:h-12 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
-        <a href="#approche" className="hover:text-gray-900 transition-colors">Notre approche</a>
-        <a href="#mission" className="hover:text-gray-900 transition-colors">Notre mission</a>
-        <a href="#contact" className="hover:text-gray-900 transition-colors">Contactez-nous</a>
+        <a href="#approche" className="hover:text-gray-900 transition-colors">Mon approche</a>
+        <a href="#mission" className="hover:text-gray-900 transition-colors">Ma mission</a>
+        <a href="#contact" className="hover:text-gray-900 transition-colors">Me contacter</a>
       </div>
       <a href="#contact" className="bg-[#00ada3] hover:bg-[#00968d] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors shadow-[0_4px_14px_0_rgba(0,173,163,0.39)]">
         Prendre contact
@@ -159,7 +159,7 @@ const Hero = () => {
           Prendre contact <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
         <a href="#mission" className="group bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
-          Découvrir nos formations <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          Découvrir mes formations <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
       </div>
     </div>
@@ -172,7 +172,7 @@ const WhyTrustUs = () => (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-          Pourquoi faire confiance à <span className="text-[#00ada3]">AD Gemba</span>
+          Pourquoi me faire confiance ?
         </h2>
       </div>
 
@@ -211,11 +211,30 @@ const WhyTrustUs = () => (
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-10 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-10 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden mb-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(0,178,169,0.05),transparent_50%)]" />
         <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-medium relative z-10">
-          Cette combinaison d’expérience terrain et de leadership dans l’excellence opérationnelle permet à AD GEMBA d’accompagner ses clients dans la transformation des pertes industrielles en performance globale.
+          Cette combinaison d’expérience terrain et de leadership dans l’excellence opérationnelle me permet d’accompagner mes clients dans la transformation des pertes industrielles en performance globale.
         </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-lg shadow-blue-900/5 flex flex-col md:flex-row items-center gap-10">
+        <div className="shrink-0 relative">
+          <div className="absolute inset-0 bg-[#00ada3]/20 rounded-full blur-xl translate-y-2 translate-x-2"></div>
+          <img src="/Photo_Alain.png" alt="Alain Dechaud" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl relative z-10" />
+        </div>
+        <div className="text-center md:text-left">
+          <h3 className="text-2xl font-bold text-slate-900 mb-5">L'humain au cœur de la performance</h3>
+          <p className="text-lg text-slate-600 leading-relaxed mb-6 italic">
+            « Ce qui m’anime profondément, c’est de voir des équipes reprendre le contrôle de leur quotidien, comprendre ce qu’il se passe vraiment, et progresser avec fierté. »
+          </p>
+          <div className="flex flex-col md:flex-row items-center gap-3 justify-center md:justify-start">
+             <div className="h-0.5 w-8 bg-[#00ada3] rounded-full hidden md:block"></div>
+             <p className="text-base text-slate-800 font-semibold">
+               C’est cette conviction qui guide chacune de mes interventions.
+             </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -225,7 +244,7 @@ const FeaturesLenders = () => (
   <section id="approche" className="py-20 px-4 bg-white">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-2 block">NOTRE APPROCHE GEMBA</span>
+        <h2 className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-2 block">MON APPROCHE GEMBA</h2>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -271,7 +290,7 @@ const FeaturesLenders = () => (
               <li><strong>Mesurer</strong> pour décider</li>
               <li><strong>Mesurer</strong> les temps réels (cycles, attentes…)</li>
               <li><strong>Quantifier</strong> les écarts</li>
-              <li>Nous identifions et cartographions avec précision toutes les sources de pertes qui freinent votre <strong>rentabilité</strong></li>
+              <li>J'identifie et cartographie avec précision toutes les sources de pertes qui freinent votre <strong>rentabilité</strong></li>
             </ul>
           </div>
         </div>
@@ -302,11 +321,11 @@ const FeaturesAgencies = () => {
     <section id="mission" className="py-24 px-4 bg-gradient-to-b from-white to-blue-50/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-4 block">NOTRE MISSION</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
-            Nous optimisons vos opérations sur le terrain pour ancrer <br className="hidden md:block" />
+          <h2 className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-4 block">MA MISSION</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+            J'optimise vos opérations sur le terrain pour ancrer <br className="hidden md:block" />
             <span className="text-[#00B2A9]">l'amélioration continue dans votre ADN.</span>
-          </h2>
+          </h3>
         </div>
 
         <div className="flex justify-center mb-12 border-b border-gray-200">
@@ -428,14 +447,14 @@ const ContactCTA = () => (
         <Zap className="w-6 h-6 text-[#00B2A9]" />
       </div>
       
-      <span className="text-[#00B2A9] font-semibold text-sm tracking-wider uppercase mb-4 block">Contactez-nous</span>
+      <h2 className="text-[#00B2A9] font-semibold text-sm tracking-wider uppercase mb-4 block">Me contacter</h2>
       
       <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
         Prêt à transformer votre <span className="text-[#00B2A9]">performance ?</span>
       </h2>
       
       <p className="text-gray-500 max-w-xl mx-auto">
-        Remplissez ce formulaire pour être recontacté par Alain Dechaud et discuter de vos objectifs d'amélioration continue.
+        Remplissez ce formulaire pour que je puisse vous recontacter et discuter de vos objectifs d'amélioration continue.
       </p>
     </div>
 
@@ -453,16 +472,16 @@ const Footer = () => (
           <img src="/logo.svg" alt="AD Gemba Logo" className="h-16 md:h-20 w-auto object-contain" style={{ imageRendering: 'high-quality', transform: 'translateZ(0)' }} referrerPolicy="no-referrer" />
         </div>
         <p className="text-gray-500 text-sm max-w-sm">
-          Nous transformons votre performance opérationnelle directement sur le terrain pour développer une culture pérenne d'amélioration continue.
+          Je transforme votre performance opérationnelle directement sur le terrain pour développer une culture pérenne d'amélioration continue.
         </p>
       </div>
       
       <div>
         <h4 className="font-bold text-slate-900 mb-6">Navigation</h4>
         <ul className="space-y-4 text-sm text-gray-500">
-          <li><a href="#approche" className="hover:text-[#00ada3] transition-colors">Notre approche</a></li>
-          <li><a href="#mission" className="hover:text-[#00ada3] transition-colors">Notre mission</a></li>
-          <li><a href="#contact" className="hover:text-[#00ada3] transition-colors">Contactez-nous</a></li>
+          <li><a href="#approche" className="hover:text-[#00ada3] transition-colors">Mon approche</a></li>
+          <li><a href="#mission" className="hover:text-[#00ada3] transition-colors">Ma mission</a></li>
+          <li><a href="#contact" className="hover:text-[#00ada3] transition-colors">Me contacter</a></li>
         </ul>
       </div>
 
