@@ -48,7 +48,7 @@ export function MultiStepForm() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "VOTRE_CLE_D_ACCES_ICI", 
+          access_key: "c1afce52-438e-40a4-bdbb-4ab16896c595", 
           email: formData.email,
           name: formData.name,
           message: formData.goal,
