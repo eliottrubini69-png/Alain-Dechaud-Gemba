@@ -161,7 +161,6 @@ export function MultiStepForm() {
               placeholder={currentStepData.placeholder}
               value={formData[currentStepData.field] || ""}
               onChange={(e) => handleInputChange(currentStepData.field, e.target.value)}
-              autoFocus
               className="h-14 text-base transition-all duration-500 border-slate-200 focus:border-[#00B2A9] focus:ring-[#00B2A9]/20"
               disabled={isSubmitting}
             />
