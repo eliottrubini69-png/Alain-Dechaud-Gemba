@@ -221,7 +221,7 @@ const WhyTrustUs = () => (
       <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-lg shadow-blue-900/5 flex flex-col md:flex-row items-center gap-10">
         <div className="shrink-0 relative">
           <div className="absolute inset-0 bg-[#00ada3]/20 rounded-full blur-xl translate-y-2 translate-x-2"></div>
-          <img src="/photo_alain_final.png" alt="Alain Dechaud" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl relative z-10" />
+          <img src="/alainphoto.png" alt="Alain Dechaud" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl relative z-10" />
         </div>
         <div className="text-center md:text-left">
           <h3 className="text-2xl font-bold text-slate-900 mb-5">L'humain au cœur de la performance</h3>
