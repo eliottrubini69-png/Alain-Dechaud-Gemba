@@ -221,7 +221,7 @@ const WhyTrustUs = () => (
       <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-lg shadow-blue-900/5 flex flex-col md:flex-row items-center gap-10">
         <div className="shrink-0 relative">
           <div className="absolute inset-0 bg-[#00ada3]/20 rounded-full blur-xl translate-y-2 translate-x-2"></div>
-          <img src="/photo_alain.png" alt="Alain Dechaud" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl relative z-10" />
+          <img src="/alainphoto.png" alt="Alain Dechaud" className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl relative z-10" />
         </div>
         <div className="text-center md:text-left">
           <h3 className="text-2xl font-bold text-slate-900 mb-5">L'humain au cœur de la performance</h3>
@@ -273,7 +273,7 @@ const FeaturesLenders = () => (
             <ul className="text-gray-600 space-y-3 list-disc pl-5">
               <li>Les opérateurs détiennent la <strong>réalité du terrain</strong></li>
               <li><strong>Analyses des causes</strong> plutôt que traiter les symptômes</li>
-              <li>Transformer l’écoute en <strong>action concrètes</strong></li>
+              <li>Transformer l’écoute en <strong>actions concrètes</strong></li>
             </ul>
           </div>
         </div>
@@ -304,8 +304,8 @@ const FeaturesLenders = () => (
             <ul className="text-gray-600 space-y-3 list-disc pl-5">
               <li>Construire avec les équipes des solutions réalistes et <strong>immédiatement</strong> applicables</li>
               <li>Tester <strong>rapidement</strong>, ajuster ensemble</li>
-              <li>Aligner la performance et adhésion pour garantir l’<strong>appropriation</strong></li>
-              <li>Impliquer pour <strong>pérenniser</strong> des solutions durablement appliquées</li>
+              <li>Aligner performance et adhésion pour garantir l’<strong>appropriation</strong></li>
+              <li>Impliquer pour <strong>pérenniser</strong> des solutions</li>
             </ul>
           </div>
         </div>
@@ -361,7 +361,7 @@ const FeaturesAgencies = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Observation & Analyse</h4>
-                  <p className="text-xs text-gray-500">Analyse détaillée de vos flux et de vos processus, réalisée directement sur le terrain.</p>
+                  <p className="text-xs text-gray-500">Analyse détaillée de vos flux et de vos processus, réalisée directement sur le terrain</p>
                 </div>
               </div>
               
@@ -371,7 +371,7 @@ const FeaturesAgencies = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Traque des gaspillages</h4>
-                  <p className="text-xs text-gray-500">Identification stricte des pertes en impliquant activement vos équipes dans la démarche.</p>
+                  <p className="text-xs text-gray-500">Identification stricte des pertes en impliquant activement vos équipes dans la démarche</p>
                 </div>
               </div>
 
@@ -381,7 +381,7 @@ const FeaturesAgencies = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Déploiement Kaizen</h4>
-                  <p className="text-xs text-gray-500">Mise en œuvre rapide d'améliorations concrètes, simples et durables pour l'atelier.</p>
+                  <p className="text-xs text-gray-500">Mise en œuvre rapide d'améliorations concrètes, simples et durables pour l'atelier</p>
                 </div>
               </div>
             </div>
